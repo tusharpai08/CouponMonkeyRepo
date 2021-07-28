@@ -1,0 +1,87 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Coupon Monkey</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+
+<!-- Card full set --> 
+  <ion-card>
+    <!-- card image --> 
+    <img class="restroLogo" src="../../assets/images/YellowChili-Bottom.png" />
+
+    <!-- card header -->
+    <ion-card-header>
+      <ion-card-subtitle>Indian Cousine</ion-card-subtitle>
+      <ion-card-title class='cardTitle'>Yellow Chili</ion-card-title>
+    </ion-card-header>
+
+  <!-- card content -->
+    <ion-card-content class='cardDesc'>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+
+  <!-- card button -->
+    <ion-button expand="full" color="dark" [routerLink]="['/coupons']">
+      <ion-icon spot="icon-only" name="ticket-outline">
+      </ion-icon>
+    </ion-button>
+  </ion-card>
+<!--/Card full set --> 
+
+<!-- Card full set --> 
+<ion-card>
+  <!-- card image --> 
+  <img class="restroLogo" src="../../assets/images/ormistion.jpg" />
+
+  <!-- card header -->
+  <ion-card-header>
+    <ion-card-subtitle>Cafe Food, Coffee and Tea</ion-card-subtitle>
+    <ion-card-title class='cardTitle'>Ormiston Cafe</ion-card-title>
+  </ion-card-header>
+
+<!-- card content -->
+  <ion-card-content class='cardDesc'>
+    Keep close to Nature's heart... and break clear away, once in awhile,
+    and climb a mountain or spend a week in the woods. Wash your spirit clean.
+  </ion-card-content>
+
+<!-- card button -->
+  <ion-button expand="full" color="dark" [routerLink]="['/coupons']">
+    <ion-icon spot="icon-only" name="ticket-outline">
+    </ion-icon>
+  </ion-button>
+</ion-card>
+<!--/Card full set --> 
+
+
+<!-- Adds cards using hosted JSON file -->
+
+<ion-card *ngFor = "let item of items" >
+  <!-- card image --> 
+  <ion-icon name="people"></ion-icon>
+
+  <!-- card header -->
+  <ion-card-header>
+    <ion-card-subtitle>{{item.cuisine}}</ion-card-subtitle>
+    <ion-card-title class='cardTitle'>{{item.name}}</ion-card-title>
+  </ion-card-header>
+
+<!-- card content -->
+  <ion-card-content class='cardDesc'>
+    {{item.desc}}
+  </ion-card-content>
+
+<!-- card button -->
+  <ion-button expand="full" color="dark" [routerLink]="['/coupons']">
+    <ion-icon spot="icon-only" name="ticket-outline">
+    </ion-icon>
+  </ion-button>
+</ion-card>
+<!--/Card full set --> 
+
+
+</ion-content>
