@@ -24,8 +24,8 @@ export class HomePage {
      let url = 'https://jsonplaceholder.typicode.com/photos';
      let data: Observable<any> = this.http.get(url);
      data.subscribe(result => {
-     /*  this.items = result; */
-      console.log(result);
+     this.items = result;
+      /* console.log(result); */
     });
 
     }
