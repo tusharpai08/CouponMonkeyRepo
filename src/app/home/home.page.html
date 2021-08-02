@@ -62,17 +62,17 @@
 
 <ion-card *ngFor = "let item of items" >
   <!-- card image --> 
-  <ion-icon name="people"></ion-icon>
+  <img class="restroLogo" [src]="items.thumbnailUrl"/>
 
   <!-- card header -->
   <ion-card-header>
-    <ion-card-subtitle>{{item.cuisine}}</ion-card-subtitle>
-    <ion-card-title class='cardTitle'>{{item.name}}</ion-card-title>
+    <ion-card-subtitle>ABC</ion-card-subtitle>
+    <ion-card-title class='cardTitle'>{{item.title}}</ion-card-title>
   </ion-card-header>
 
 <!-- card content -->
   <ion-card-content class='cardDesc'>
-    {{item.desc}}
+    More Description
   </ion-card-content>
 
 <!-- card button -->
